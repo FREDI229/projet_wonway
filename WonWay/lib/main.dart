@@ -32,20 +32,32 @@ class _HomePageState extends State<HomePage> {
         elevation: 12,
         title: Row(
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: FaIcon(
-                FontAwesomeIcons.userGroup,
-                size: 20,
-                color: Colors.deepPurple,
-              ),
-              color: Colors.deepPurple,
-            ),
+             Container(
+                          //  padding: EdgeInsets.only(top: 2,left: 2),
+                          width: 20,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          const Color.fromARGB(255, 32, 69, 136),
+                          const Color.fromARGB(255, 113, 33, 145),
+                        ],
+                      ),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Icon(Icons.people_alt_outlined,color: Colors.white,size: 15,)
+                   
+                          ),
+                          SizedBox(width: 10),
+                        
             Text(
               "WonWay",
               style: TextStyle(
-                color: Colors.deepPurple,
-                fontWeight: FontWeight.bold,
+                 color: Colors.deepPurple,
+                
+                fontWeight: FontWeight.w900,
                 fontSize: 18,
               ),
             ),
@@ -125,51 +137,54 @@ class _HomePageState extends State<HomePage> {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 30),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(vertical: 16),
-                        backgroundColor: Colors.deepPurple,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusGeometry.circular(8),
-                        ),
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          const Color.fromARGB(255, 32, 69, 136),
+                          const Color.fromARGB(255, 113, 33, 145),
+                        ],
                       ),
-                      child: Text(
-                        "commencer Gratuitement",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.center,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    width: double.infinity,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Commencer Gratuitement",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(width: 20),
+                          Icon(Icons.arrow_forward, color: Colors.white),
+                        ],
                       ),
                     ),
                   ),
                   SizedBox(height: 16),
-                  SizedBox(
+                  Container(
                     width: double.infinity,
-                    child: OutlinedButton(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.deepPurple),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextButton(
                       onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        side: BorderSide(
-                          color: const Color.fromARGB(240, 22, 72, 112),
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
                       child: Text(
                         "Voir la Démo IA",
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w300,
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
+
                   SizedBox(height: 40),
                   Container(
                     padding: EdgeInsets.only(top: 16),
@@ -311,7 +326,7 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
                               FaIcon(
-                                FontAwesomeIcons.bolt,
+                                FontAwesomeIcons.bullseye,
                                 size: 20,
                                 color: Colors.white,
                               ),
@@ -335,122 +350,125 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   SizedBox(height: 40),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade300,
-                          offset: Offset(0, 2),
-                          spreadRadius: 1,
-                          blurRadius: 1,
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "10k+",
-                                  style: TextStyle(
-                                    fontSize: 40,
-                                    color: Colors.deepPurple,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Dévolopeur Inscrits",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // SizedBox(width: 150,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "500k+",
-                                  style: TextStyle(
-                                    fontSize: 40,
-                                    color: Colors.deepPurple,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Entreprise Partenaires",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 30),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "95%",
-                                  style: TextStyle(
-                                    fontSize: 40,
-                                    color: Colors.deepPurple,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Taux de Satisfaction",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "48h",
-                                  style: TextStyle(
-                                    fontSize: 40,
-                                    color: Colors.deepPurple,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Temps Moyen de Recrutement",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
 
                   SizedBox(height: 30),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.only(
+                top: 20,
+                left: 10,
+                bottom: 20,
+                right: 10,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade300,
+                    offset: Offset(0, 0),
+                    spreadRadius: 1,
+                    blurRadius: 1,
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "10k+",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "Dévolopeur Inscrits",
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      // SizedBox(width: 150,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "500k+",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "Entreprise Partenaires",
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "95%",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "Taux de Satisfaction",
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "48h",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "Temps Moyen de Recrutement",
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [
                   Container(
                     width: 200,
                     height: 30,
@@ -477,7 +495,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 16),
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
@@ -505,7 +523,14 @@ class _HomePageState extends State<HomePage> {
                     """Notre plateforme combine l'intelligence artificielle et l'expertise humaine pour créér les meilleures correspondances du marché""",
                     style: TextStyle(color: Colors.grey.shade500),
                   ),
+                ],
+              ),
+            ),
 
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                children: [
                   SizedBox(height: 30),
                   Container(
                     padding: EdgeInsets.all(16),
@@ -516,8 +541,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -540,7 +565,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   FaIcon(
                                     FontAwesomeIcons.brain,
-                                    size: 16,
+                                    size: 20,
                                     color: Colors.white,
                                   ),
                                 ],
@@ -594,8 +619,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -618,7 +643,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   FaIcon(
                                     FontAwesomeIcons.bolt,
-                                    size: 16,
+                                    size: 20,
                                     color: Colors.white,
                                   ),
                                 ],
@@ -674,8 +699,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -698,7 +723,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   FaIcon(
                                     FontAwesomeIcons.shield,
-                                    size: 16,
+                                    size: 20,
                                     color: Colors.white,
                                   ),
                                 ],
@@ -753,8 +778,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -765,7 +790,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.only(top: 12),
+                              padding: EdgeInsets.only(top: 10),
                               width: 50,
                               height: 50,
                               decoration: BoxDecoration(
@@ -775,11 +800,7 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  FaIcon(
-                                    FontAwesomeIcons.userGroup,
-                                    size: 16,
-                                    color: Colors.white,
-                                  ),
+                                 Icon(Icons.people_alt_outlined,color: Colors.white,size: 30,)
                                 ],
                               ),
                             ),
@@ -825,8 +846,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -849,7 +870,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   FaIcon(
                                     FontAwesomeIcons.buildingCircleCheck,
-                                    size: 16,
+                                    size: 20,
                                     color: Colors.white,
                                   ),
                                 ],
@@ -898,8 +919,8 @@ class _HomePageState extends State<HomePage> {
                         BoxShadow(
                           color: Colors.grey.shade300,
                           offset: Offset(0, 3),
-                          spreadRadius: 1,
-                          blurRadius: 1,
+                          spreadRadius: 2,
+                          blurRadius: 5,
                         ),
                       ],
                     ),
@@ -955,24 +976,337 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(height: 10),
                         Row(
                           children: [
-                            
-                               Row(
-                                children: [
-                                  FaIcon(FontAwesomeIcons.arrowTrendUp, color: Colors.green,),
-                                  SizedBox(width: 20),
-                                  Text("Insights en temps réel",style: TextStyle(color: Colors.green
-                                  )),
-                                ],
-                              ),
-                            
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.arrowTrendUp,
+                                  color: Colors.green,
+                                ),
+                                SizedBox(width: 20),
+                                Text(
+                                  "Insights en temps réel",
+                                  style: TextStyle(color: Colors.green),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ],
                     ),
                   ),
+                  SizedBox(height: 50),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "ce Que Disent Nos Utilisateurs",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+                  Text(
+                    """Découvrez pourquoi WonWay est la platforme préférée des professionels IT""",
+                    style: TextStyle(fontSize: 14, color: Colors.grey),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 20),
+
+                  Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          offset: Offset(0, 3),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                          ],
+                        ),
+
+                        SizedBox(height: 10),
+                        Text(
+                          """L'analyse IA de WonWay m'a permis de trouver le poste parfait en 2 semaines. Incroyable précision dans les recommandations !""",
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                        SizedBox(height: 10),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "Sarah M.",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(width: 20),
+                              ],
+                            ),
+
+                            Row(
+                              children: [
+                                Text(
+                                  "Developpeuse Full-Stack ",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 20),
+                  Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          offset: Offset(0, 3),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                          ],
+                        ),
+
+                        SizedBox(height: 10),
+                        Text(
+                          """En tant que recruteur,WonWay a divisé par 3 notre temps de sourcing.Les candidats sont parfaitement qualifiés!""",
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                        SizedBox(height: 10),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "Marc L.",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(width: 20),
+                              ],
+                            ),
+
+                            Row(
+                              children: [
+                                Text(
+                                  "Recruteur Tech chez TechCorp",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          offset: Offset(0, 3),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                            Icon(Icons.star, color: Colors.yellow, size: 18),
+                          ],
+                        ),
+
+                        SizedBox(height: 10),
+                        Text(
+                          """L'interface est intuitive et l'IA comprend vraiment les nuances techniques.Un game changer pour le recrutement IT!""",
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Text(
+                              "Emma R.",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+
+                        Row(
+                          children: [
+                            Text(
+                              "CTO chez StartupLab",
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
+            Container(
+              padding: EdgeInsets.only(
+                top: 25,
+                left: 10,
+                right: 10,
+                bottom: 25,
+              ),
+
+              width: double.infinity,
+              color: Colors.grey.shade200,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    """Prêt à Révolutionner Votre Recrutement ?""",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    """Rejoignez des millier de professionnels qui font confiance à WonWay pour leurs besoins en recrutement It""",
+                    style: TextStyle(fontSize: 14, color: Colors.grey),
+                  ),
+
+                  SizedBox(height: 20),
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          const Color.fromARGB(255, 32, 69, 136),
+                          const Color.fromARGB(255, 113, 33, 145),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    width: double.infinity,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Commencer",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.deepPurple),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Contact",
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                          padding: EdgeInsets.only(top: 5),
+                          width: 30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [
+                          const Color.fromARGB(255, 32, 69, 136),
+                          const Color.fromARGB(255, 113, 33, 145),
+                        ],
+                      ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            children: [
+                       Icon(Icons.people_alt_outlined,color: Colors.white,size: 20,)
+                            ],
+                          ),
+                        ),
+                    
+                    SizedBox(width: 5),
+                    Text(
+                      "WonWay",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                     
+                    FaIcon(FontAwesomeIcons.copyright, size: 14,color: Colors.grey,),
+                    SizedBox(width: 5),
+                    Text(
+                      """2024 WonWay. Tous droits réservés.Platforme de recrutement IT avec IA""",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            )
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:wonway/UI/pages/loobi.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,31 +17,34 @@ class _HomePageState extends State<HomePage> {
         elevation: 12,
         title: Row(
           children: [
-             Container(
-                          //  padding: EdgeInsets.only(top: 2,left: 2),
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                        begin: Alignment.bottomLeft,
-                        end: Alignment.topRight,
-                        colors: [
-                          const Color.fromARGB(255, 32, 69, 136),
-                          const Color.fromARGB(255, 113, 33, 145),
-                        ],
-                      ),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Icon(Icons.people_alt_outlined,color: Colors.white,size: 15,)
-                   
-                          ),
-                          SizedBox(width: 10),
-                        
+            Container(
+              //  padding: EdgeInsets.only(top: 2,left: 2),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                  colors: [
+                    const Color.fromARGB(255, 32, 69, 136),
+                    const Color.fromARGB(255, 113, 33, 145),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Icon(
+                Icons.people_alt_outlined,
+                color: Colors.white,
+                size: 15,
+              ),
+            ),
+            SizedBox(width: 10),
+
             Text(
               "WonWay",
               style: TextStyle(
-                 color: Colors.deepPurple,
-                
+                color: Colors.deepPurple,
+
                 fontWeight: FontWeight.w900,
                 fontSize: 18,
               ),
@@ -118,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    """WonWay révolutionne le recrutement IT avec une IA avancée qui analyse les profil et optimise les correspondances telents-entreprises""",
+                    """WonWay révolutionne le recrutement IT avec une IA avancée qui analyse les profil et optimise les correspondances talents-entreprises""",
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 30),
@@ -136,12 +139,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     width: double.infinity,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoobiPage()),
+                        );
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Commencer Gratuitement",
+                            "Commencer ",
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(width: 20),
@@ -785,7 +793,11 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                 Icon(Icons.people_alt_outlined,color: Colors.white,size: 30,)
+                                  Icon(
+                                    Icons.people_alt_outlined,
+                                    color: Colors.white,
+                                    size: 30,
+                                  ),
                                 ],
                               ),
                             ),
@@ -1242,56 +1254,63 @@ class _HomePageState extends State<HomePage> {
             Container(
               padding: EdgeInsets.all(20),
               child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                          padding: EdgeInsets.only(top: 5),
-                          width: 30,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                        begin: Alignment.bottomLeft,
-                        end: Alignment.topRight,
-                        colors: [
-                          const Color.fromARGB(255, 32, 69, 136),
-                          const Color.fromARGB(255, 113, 33, 145),
-                        ],
-                      ),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                       Icon(Icons.people_alt_outlined,color: Colors.white,size: 20,)
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(top: 5),
+                        width: 30,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [
+                              const Color.fromARGB(255, 32, 69, 136),
+                              const Color.fromARGB(255, 113, 33, 145),
                             ],
                           ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                    
-                    SizedBox(width: 5),
-                    Text(
-                      "WonWay",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                     
-                    FaIcon(FontAwesomeIcons.copyright, size: 14,color: Colors.grey,),
-                    SizedBox(width: 5),
-                    Text(
-                      """2024 WonWay. Tous droits réservés.Platforme de recrutement IT avec IA""",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ],
-                ),
-              ],
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.people_alt_outlined,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(width: 5),
+                      Text(
+                        "WonWay",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.copyright,
+                        size: 14,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(width: 5),
+                      Text(
+                        """2024 WonWay. Tous droits réservés.Platforme de recrutement IT avec IA""",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            )
           ],
         ),
       ),

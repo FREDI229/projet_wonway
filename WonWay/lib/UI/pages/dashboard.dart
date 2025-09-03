@@ -10,6 +10,9 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      home: Scaffold(
+        body: Padding(padding: EdgeInsets.all(16)),
+      ),);
   }
 }

@@ -22,7 +22,7 @@ class _It_InscriptionPageState extends State<It_InscriptionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(top: 80,left: 16,right: 16,bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

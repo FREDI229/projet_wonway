@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
 
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          const SizedBox(width: 16),
+          const SizedBox(width: 10),
         ],
       ),
 
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsetsGeometry.all(16),
+              padding: EdgeInsetsGeometry.only(top: 40,left: 20,right: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -1191,8 +1191,8 @@ class _HomePageState extends State<HomePage> {
             Container(
               padding: EdgeInsets.only(
                 top: 25,
-                left: 10,
-                right: 10,
+                left: 15,
+                right: 15,
                 bottom: 25,
               ),
 
@@ -1225,7 +1225,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     width: double.infinity,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoobiPage()),
+                        );
+                      },
                       child: Text(
                         "Commencer",
                         style: TextStyle(color: Colors.white),
@@ -1279,7 +1284,7 @@ class _HomePageState extends State<HomePage> {
                             Icon(
                               Icons.people_alt_outlined,
                               color: Colors.white,
-                              size: 20,
+                              size: 15,
                             ),
                           ],
                         ),
@@ -1298,13 +1303,13 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       FaIcon(
                         FontAwesomeIcons.copyright,
-                        size: 14,
+                        size: 10,
                         color: Colors.grey,
                       ),
-                      SizedBox(width: 5),
+                      SizedBox(width: 2),
                       Text(
-                        """2024 WonWay. Tous droits réservés.Platforme de recrutement IT avec IA""",
-                        style: TextStyle(fontSize: 10),
+                     """2024 WonWay.Tous droits réservés Platforme de recrutement IT avec IA""",
+                        style: TextStyle(fontSize: 10,color: Colors.grey.shade700),
                       ),
                     ],
                   ),

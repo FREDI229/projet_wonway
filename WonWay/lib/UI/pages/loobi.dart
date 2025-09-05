@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wonway/UI/pages/IT/it_connexion.dart';
 import 'package:wonway/UI/pages/IT/it_inscrption.dart';
 import 'package:wonway/UI/pages/Recreteur/recru_inscription.dart';
 
@@ -21,7 +20,7 @@ class _LoobiPageState extends State<LoobiPage> {
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(top: 80,left: 16,right: 16,bottom: 20),
             child: Column(
               children: [
                 Card(

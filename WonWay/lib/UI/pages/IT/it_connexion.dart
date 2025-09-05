@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wonway/UI/pages/loobi.dart';
+
 
 class It_ConnexionPage extends StatefulWidget {
   const It_ConnexionPage({super.key});
@@ -19,7 +19,7 @@ class _It_ConnexionPageState extends State<It_ConnexionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(top: 80,left: 16,right: 16,bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
